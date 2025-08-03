@@ -39,7 +39,7 @@ export default function App() {
     setLoading(true);
     setResult('');
     try {
-      const res = await axios.post("http://localhost:8000/generate", formData);
+      const res = await axios.post("https://trainai-backend.onrender.com/generate", formData);
       setResult(res.data.plan);
     } catch (err) {
       const errorMsg = err.response?.data?.message || err.message || 'An error occurred';
